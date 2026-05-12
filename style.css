@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  background: #f7f4ef;
+  line-height: 1.6;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 80px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  background: #111;
+  color: white;
+}
+
+.small-title {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #aaa;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 6.5rem;
+  letter-spacing: -5px;
+  line-height: 0.95;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  margin: 25px 0;
+  color: #ddd;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+  max-width: 650px;
+  color: #f0f0f0;
+}
+
+main {
+  width: 86%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 0;
+}
+
+.intro {
+  margin-bottom: 45px;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.intro p {
+  max-width: 780px;
+  color: #333;
+}
+
+.block {
+  background: white;
+  padding: 0;
+  margin-bottom: 35px;
+  border: 1px solid #d8d8d8;
+  overflow: hidden;
+}
+
+.block summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 38px 45px;
+  background: white;
+  transition: 0.25s;
+}
+
+.block summary:hover {
+  background: #f1f1f1;
+}
+
+.block summary::-webkit-details-marker {
+  display: none;
+}
+
+.block summary h2 {
+  font-size: 2.25rem;
+  margin-bottom: 8px;
+}
+
+.block summary p {
+  color: #555;
+  margin-bottom: 0;
+}
+
+.block[open] {
+  padding-bottom: 45px;
+}
+
+.block[open] > p,
+.block[open] > .grid,
+.block[open] > .subsection,
+.block[open] > .media-placeholder,
+.block[open] > .button,
+.block[open] > ul {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
+.block > p {
+  margin: 0 45px 18px;
+  max-width: 900px;
+}
+
+.featured {
+  border: 3px solid #111;
+}
+
+.featured summary {
+  background: #111;
+  color: white;
+}
+
+.featured summary p {
+  color: #ccc;
+}
+
+.featured summary:hover {
+  background: #222;
+}
+
+.block h3 {
+  font-size: 1.35rem;
+  margin-bottom: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 30px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 28px;
+  background: #fafafa;
+}
+
+.subsection {
+  margin-top: 35px;
+  padding-top: 35px;
+  border-top: 1px solid #ccc;
+}
+
+.subsection h3 {
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+}
+
+.media-placeholder {
+  margin-top: 20px;
+  height: 220px;
+  border: 2px dashed #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  background: #f3f3f3;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 20px;
+}
+
+.media-placeholder.large {
+  height: 450px;
+  background: #222;
+  color: #aaa;
+  border-color: #555;
+}
+
+.media-placeholder.wide {
+  height: 300px;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-block;
+  margin: 15px 0 20px;
+  padding: 12px 18px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #333;
+}
+
+ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.contact {
+  background: #111;
+  color: white;
+  border-color: #111;
+}
+
+.contact summary {
+  background: #111;
+  color: white;
+}
+
+.contact summary p {
+  color: #bbb;
+}
+
+.contact p {
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 60px 7%;
+  }
+
+  .hero h1 {
+    font-size: 4.3rem;
+  }
+
+  main {
+    width: 92%;
+  }
+
+  .block summary {
+    padding: 28px;
+  }
+
+  .block summary h2 {
+    font-size: 1.8rem;
+  }
+
+  .block[open] > p,
+  .block[open] > .grid,
+  .block[open] > .subsection,
+  .block[open] > .media-placeholder {
+    margin-left: 28px;
+    margin-right: 28px;
+  }
+
+  .block > p {
+    margin-left: 28px;
+    margin-right: 28px;
+  }
+
+  .featured {
+    border-width: 2px;
+  }
+}
